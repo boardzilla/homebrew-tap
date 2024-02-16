@@ -5,21 +5,21 @@
 class BoardzillaDevtools < Formula
   desc ""
   homepage "https://docs.boardzilla.io/"
-  version "0.0.76"
+  version "0.0.77"
   license "GPL-v3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.76/bz_macos_arm64.tar.gz"
-      sha256 "d3fc6f51301d42b1a566e1e31f3a520f3daca8c0e7a92e7735db0d3084a71a3e"
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.77/bz_macos_arm64.tar.gz"
+      sha256 "2c8c5213c0e174e675037d731709cb8455e4930aa6940d2e4d9b3dd665073795"
 
       def install
         bin.install "bz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.76/bz_macos_amd64.tar.gz"
-      sha256 "abf7dd175d41de4b2d727a38a6163dfadd5ca8983c293e2e4ff9a3fb04c3c4e5"
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.77/bz_macos_amd64.tar.gz"
+      sha256 "cef48bdbb2f81601658f1fd37e4fb7317d73446134ce3e4dafa0e6534ddd65b2"
 
       def install
         bin.install "bz"
@@ -29,16 +29,16 @@ class BoardzillaDevtools < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.76/bz_linux_arm64.tar.gz"
-      sha256 "91acd08a200bdf3dfbd86cd84e86f0d229ee64ca958bc9bf7ff35203841d705c"
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.77/bz_linux_arm64.tar.gz"
+      sha256 "2ed990c9c07a7d12a8db03bc5ca8281ba2142a764df512b254634d7b24bf2e53"
 
       def install
         bin.install "bz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.76/bz_linux_amd64.tar.gz"
-      sha256 "914fd2ff1d4fee32d4369a040f978b1655d77e460d2ec8b0fceb6cca3f6b69c0"
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.77/bz_linux_amd64.tar.gz"
+      sha256 "62e08b696c114e2442fe3af1abe7d28e5cca8635d0b7f84c4d3c52c8b9c26ae0"
 
       def install
         bin.install "bz"
