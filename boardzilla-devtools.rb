@@ -5,21 +5,21 @@
 class BoardzillaDevtools < Formula
   desc ""
   homepage "https://docs.boardzilla.io/"
-  version "0.0.80"
+  version "0.1.0"
   license "GPL-v3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.80/bz_macos_arm64.tar.gz"
-      sha256 "21d5a1a72be7ece44c505d3c903686eaceaca07c06b0c9b8cb37e48a709625d4"
+    if Hardware::CPU.intel?
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.1.0/bz_macos_amd64.tar.gz"
+      sha256 "62c7a989777c715b4e739621a0884fc91d2a5eb0d5d9ea234c8b7ddc0d6abbfe"
 
       def install
         bin.install "bz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.80/bz_macos_amd64.tar.gz"
-      sha256 "18be852bf0e678bfb05891568f25d795a4eacdbf944497afac385a4e19fe1583"
+    if Hardware::CPU.arm?
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.1.0/bz_macos_arm64.tar.gz"
+      sha256 "dd257f0ee56675a488c688773d5c2ddd8984153171d7fe88809db7237a3b8564"
 
       def install
         bin.install "bz"
@@ -29,16 +29,16 @@ class BoardzillaDevtools < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.80/bz_linux_arm64.tar.gz"
-      sha256 "74c6aaa9d9c85c081dd37a46cc7539e1958f91cb3d34ef1f3623e5a0e31a3039"
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.1.0/bz_linux_arm64.tar.gz"
+      sha256 "f10cd49340dc819981478bf2e6b9c9edd398dd26c02e3e9cdd751ca352a4e4c6"
 
       def install
         bin.install "bz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.0.80/bz_linux_amd64.tar.gz"
-      sha256 "853bf0443c8048ab422649dbf927174b0004a4d20e139d8aa79f77f7db46e2a0"
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.1.0/bz_linux_amd64.tar.gz"
+      sha256 "d2294e75575e84e451ef1e6867e5703c039d0587c86c3f4a9a7206cfa8a4acf4"
 
       def install
         bin.install "bz"
