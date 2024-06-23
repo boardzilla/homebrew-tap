@@ -5,21 +5,21 @@
 class BoardzillaDevtools < Formula
   desc ""
   homepage "https://docs.boardzilla.io/"
-  version "0.2.6"
+  version "0.2.7"
   license "GPL-v3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.6/bz_macos_arm64.tar.gz"
-      sha256 "48ad5608593ec10ffc03e4d7ef4150de87a4cbbe154503c424a84938661ead98"
+    if Hardware::CPU.intel?
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.7/bz_macos_amd64.tar.gz"
+      sha256 "0331735f81e5fa235636edc82ceb7a094642840c5d7623b86f8642b8494168b2"
 
       def install
         bin.install "bz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.6/bz_macos_amd64.tar.gz"
-      sha256 "4153877fb47d4cc9859ebe32ea319aba65ee546cbe5e96890f33d8e750c7cd12"
+    if Hardware::CPU.arm?
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.7/bz_macos_arm64.tar.gz"
+      sha256 "19469fc67229de2b0a4cc9ecd464c921cad3d4e1e69d063c77268a09d5801e49"
 
       def install
         bin.install "bz"
@@ -28,17 +28,17 @@ class BoardzillaDevtools < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.6/bz_linux_arm64.tar.gz"
-      sha256 "2193d2b85a76f595b2140d5c81a750f443656339913d8f0dee155791cf18332a"
+    if Hardware::CPU.intel?
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.7/bz_linux_amd64.tar.gz"
+      sha256 "75fe91bd18a25d37d373988250805322e2d38b3629e26f0708863a493570d12d"
 
       def install
         bin.install "bz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.6/bz_linux_amd64.tar.gz"
-      sha256 "9c382a14e30b33c29f72bfa5bd3f44b0ada783aa233b64f5308d5d625613c106"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/boardzilla/boardzilla-devtools/releases/download/v0.2.7/bz_linux_arm64.tar.gz"
+      sha256 "d2388066dc622d3dabbcd8c0e2a447e23f834f1324c1910a94839b8850825e44"
 
       def install
         bin.install "bz"
